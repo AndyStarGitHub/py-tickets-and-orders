@@ -71,7 +71,8 @@ class Order(models.Model):
                              related_name="order_users")
 
     def __str__(self) -> str:
-        return f"{self.created_at.strftime("%Y-%m-%d %H:%M:%S")}"
+        created = self.created_at.strftime("%Y-%m-%d %H:%M:%S")
+        return f"{created}"
 
     class Meta:
         indexes = [
