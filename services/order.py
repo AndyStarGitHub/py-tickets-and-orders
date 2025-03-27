@@ -35,7 +35,7 @@ def create_order(
 
 def get_orders(
     username: str = None,
-) -> QuerySet:
+) -> QuerySet[Order]:
     queryset = Order.objects.all().order_by("-created_at")
 
     if username:
